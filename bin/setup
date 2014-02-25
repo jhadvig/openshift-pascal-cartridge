@@ -1,0 +1,7 @@
+#!/bin/bash
+
+wget http://downloads.sourceforge.net/project/freepascal/Linux/2.6.2/fpc-2.6.2.x86_64-linux.tar&ts=1393366376&use_mirror=netcologne
+
+tar -xvf fpc-2.6.2.x86_64-linux.tar
+
+rm fpc-2.6.2.x86_64-linux.tar

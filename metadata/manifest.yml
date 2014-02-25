@@ -1,0 +1,45 @@
+Name: pascal
+
+Cartridge-Short-Name: PASCAL
+Cartridge-Version: '0.0.1'
+Cartridge-Vendor: jhadvig
+
+Dispaly-Name: Pascal 2.6.2
+Description: "Pascal is an influential imperative and procedural programming language"
+
+Version: '1.0'
+Website: http://www.freepascal.org 
+
+Categories:
+  - service 
+  - pascal
+  - web_framework
+
+Provides:
+  - pascal-2.6.2
+  - pascal
+
+Scaling:
+  Min: 1
+  Max: -1
+
+Subscribes:
+  set-env:
+    Type: ENV:*
+    Required: false
+  set-doc-url:
+    Type: STRING:urlpath
+    Required: false
+
+Endpoints:
+  - Private-IP-Name:   HTTP_IP
+    Private-Port-Name: HTTP_PORT
+    Private-Port:      8080
+    Public-Port-Name:  PROXY_HTTP_PORT
+    Mappings:
+      - Frontend:      ""
+        Backend:       ""
+        Options:       { websocket: false }
+      - Frontend:      "/health"
+        Backend:       ""
+        Options:       { health: true }
